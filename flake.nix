@@ -22,6 +22,7 @@
           pkgs = nixpkgs.legacyPackages.${system};
         in
         {
+          default = import ./python { inherit pkgs; };
           go = import ./go { inherit pkgs; };
           python = import ./python { inherit pkgs; };
           rust = import ./rust { inherit pkgs; };
